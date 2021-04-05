@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Mali:wght@200&display=swap&family=Sue+Ellen+Francisco&display=swap&family=Monoton");
+
+:root {
+    --bg: #101010;
+    --color: #fff;
+    --base: hsla(324, 100%, 90%, 1);
+    --color-1: hsla(324, 100%, 85%, 1);
+    --color-2: hsla(324, 100%, 75%, 1);
+    --color-3: hsla(324, 100%, 65%, 1);
+    --color-4: hsla(324, 100%, 55%, 1);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    min-height: 100vh;
+}
+
+.separator {
+    width: 75%;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(
+        to right,
+        var(--base),
+        var(--color-4),
+        var(--base)
+    );
+}
+
+.btn {
+    background: transparent;
+    border: none;
+    padding: 10px 20px;
+    text-shadow: 0 0 10px var(--color-1), 0 0 20px var(--color-2),
+        0 0 40px var(--color-3), 0 0 80px var(--color-4);
+    color: var(--base);
+    box-shadow: 0 0 0 2px var(--color-1), 0 0 0 4px var(--color-4);
+    border-radius: 10px;
+    outline: none;
+}
+
+.App {
+    background-color: var(--bg);
+    width: 60vw;
+    height: 100%;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    margin-bottom: auto;
+}
+
+.footer {
+    font-family: "Cedarville Cursive", cursive;
+    font-size: 2em;
+    color: var(--base);
+    margin-top: auto;
+}
+
+.logo {
+    text-decoration: none;
+    font-family: "Cedarville Cursive", cursive;
+    font-size: 5em;
+    color: var(--base);
+    text-shadow: 0 0 10px var(--color-1), 0 0 20px var(--color-2),
+        0 0 40px var(--color-3), 0 0 80px var(--color-4);
+}
+
+.middle {
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    flex-grow: 4;
+    justify-content: space-evenly;
+}

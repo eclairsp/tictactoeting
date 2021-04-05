@@ -1,0 +1,31 @@
+.offline {
+    height: 50%;
+}
+
+.online {
+    height: 50%;
+}
+
+.btn-start {
+    font-size: 4em;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.play {
+    height: 100px;
+    width: 100px;
+    text-decoration: none;
+    font-family: "Cedarville Cursive", cursive;
+    font-size: 5em;
+    color: var(--base);
+    border-radius: 100px;
+    box-shadow: 0 0 0 5px var(--color-1), 0 0 0 10px var(--color-4);
+    cursor: pointer;
+}
+
+.coming-soon {
+    font-family: "Cedarville Cursive", cursive;
+    font-size: 4em;
+    color: var(--base);
+}

@@ -1,0 +1,49 @@
+.board {
+    box-shadow: 0 0 0 5px var(--color-1), 0 0 0 10px var(--color-2),
+        0 0 0 15px var(--color-3), 0 0 0 10px var(--color-4);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "info info refresh";
+    gap: 10px;
+    padding: 10px;
+}
+
+.board--info {
+    display: flex;
+    justify-content: center;
+    grid-area: info;
+}
+
+.board--info--card {
+    font-family: "Cedarville Cursive", cursive;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    width: 100%;
+    box-shadow: 0 0 0 1px var(--base);
+}
+
+.board--info--title,
+.board--info--value {
+    font-size: 3em;
+}
+
+.board--refresh {
+    color: var(--base);
+    grid-area: refresh;
+    box-shadow: 0 0 0 1px var(--base);
+    width: 100%;
+    cursor: pointer;
+}
+
+.board--refresh--icon {
+    height: 100px;
+    width: 100px;
+    transition: transform 0.3s;
+}
+
+.board--refresh--icon:hover {
+    transform: rotate(360deg);
+}

@@ -1,0 +1,19 @@
+.plate {
+    height: 150px;
+    width: 150px;
+    position: relative;
+    box-shadow: 0 0 0 1px var(--base);
+}
+
+.strike {
+    position: absolute;
+    width: 2px;
+    height: 200%;
+    background-image: linear-gradient(
+        to right,
+        var(--base),
+        var(--color-4),
+        var(--base)
+    );
+    border: none;
+}
