@@ -5,6 +5,10 @@
     box-shadow: 0 0 0 1px var(--base);
 }
 
+.plate--flipper {
+    animation: flip 0.5s infinite;
+}
+
 .strike {
     position: absolute;
     width: 2px;
@@ -16,4 +20,46 @@
         var(--base)
     );
     border: none;
+}
+
+@keyframes flip {
+    from {
+        transform: rotateY(0);
+    }
+
+    to {
+        transform: rotateY(180deg);
+        perspective: 1000px;
+    }
+}
+
+@media (max-width: 540px) {
+}
+
+@media (min-width: 0px) and (max-width: 280px) {
+    .plate {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@media (min-width: 281px) and (max-width: 360px) {
+    .plate {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@media (min-width: 361px) and (max-width: 540px) {
+    .plate {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
+    .plate {
+        height: 200px;
+        width: 200px;
+    }
 }

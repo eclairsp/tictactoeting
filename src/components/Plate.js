@@ -2,18 +2,14 @@ import React from "react";
 
 import "../css/plate.css";
 
-const Plate = ({id, value, turn, rotate}) => {
+const Plate = ({id, value, turn, refresh}) => {
     return (
         <>
-            <section onClick={() => turn(id)} className="plate logo center">
+            <section
+                onClick={() => turn(id)}
+                className={`plate logo center ${refresh && "plate--flipper"}`}
+            >
                 {value}
-                <hr
-                    style={{
-                        transform: `rotate(${rotate})`,
-                        display: rotate ? "block" : "none",
-                    }}
-                    className="strike"
-                ></hr>
             </section>
         </>
     );

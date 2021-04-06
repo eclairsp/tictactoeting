@@ -7,7 +7,6 @@
 }
 
 .btn-start {
-    font-size: 4em;
     text-decoration: none;
     cursor: pointer;
 }
@@ -28,4 +27,24 @@
     font-family: "Cedarville Cursive", cursive;
     font-size: 4em;
     color: var(--base);
+}
+
+@media (max-width: 540px) {
+}
+
+@media (min-width: 0px) and (max-width: 360px) {
+    .play {
+        height: 75px;
+        width: 75px;
+    }
+
+    .coming-soon {
+        font-size: 2em;
+    }
+}
+
+@media (min-width: 361px) and (max-width: 540px) {
+}
+
+@media (min-width: 541px) and (max-width: 1024px) and (orientation: portrait) {
 }

@@ -5,29 +5,43 @@ import calculateWinner from "../utils/calculateWinner";
 
 import "../css/game.css";
 
+const X_WINNING = ["\\", null, "/", null, "X", null, "/", null, "\\"];
+const O_WINNING = ["_", "_", "_", "|", "O", "|", "_", "_", "_"];
+
 const Game = () => {
     const [current, changeCurrent] = useState(Array(9).fill(null));
     // const [move, changeMove] = useState(0);
     const [xMove, changeXMove] = useState(true);
-    const [deg, changeDeg] = useState(Array(9).fill(null));
 
     const turn = (id) => {
         const squares = current.slice();
-        if (calculateWinner(squares) || squares[id]) {
+        if (
+            calculateWinner(squares) ||
+            squares[id] ||
+            JSON.stringify(squares) === JSON.stringify(X_WINNING) ||
+            JSON.stringify(squares) === JSON.stringify(O_WINNING)
+        ) {
             return;
         }
 
         squares[id] = xMove ? "X" : "O";
         changeCurrent(squares);
         changeXMove(!xMove);
-
-        console.log(id);
     };
 
     const refresh = () => {
         changeCurrent(Array(9).fill(null));
         changeXMove(true);
-        changeDeg(Array(9).fill(null));
+    };
+
+    const gameWon = (wonBy) => {
+        if (wonBy === "X") {
+            changeCurrent(X_WINNING);
+        }
+
+        if (wonBy === "O") {
+            changeCurrent(O_WINNING);
+        }
     };
 
     return (
@@ -37,8 +51,8 @@ const Game = () => {
                     current={current}
                     turn={turn}
                     xMove={xMove}
-                    deg={deg}
                     refresh={refresh}
+                    gameWon={gameWon}
                 />
             </section>
         </>
